@@ -1,0 +1,24 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title Caravan | Starter for twitter bootstrap based templates
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
+    = stylesheet_link_tag "vendors/bootstrap/bootstrap.css", :media => "all"
+    = stylesheet_link_tag "vendors/bootstrap/bootstrap-responsive.css", :media => "all"
+    = stylesheet_link_tag "application", :media => "all"
+    /
+    / HTML5 shim, for IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+      <script src="javascripts/html5shiv.js"></script>
+  %body
+    .container
+      = partial "layouts/header"
+      = yield
+      = partial "layouts/footer"
+
+    = javascript_include_tag "vendors/jquery/jquery"
+    = javascript_include_tag "vendors/bootstrap/bootstrap"
