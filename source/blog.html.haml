@@ -1,0 +1,75 @@
+.pageheader
+  %h2 Blog
+  %p.subhead Random thoughts of a web designer.
+
+.hseparator
+
+.row-fluid.blog
+  .span8.blog-content
+    .blog-post
+      .header
+        %h3 
+          =link_to 'Bootstrap and Font-Awesome frameworks reviewed', '#'
+        .post-meta
+          .row-fluid
+            .span2
+              =image_tag "person.jpg", :class => "profile-image"
+            .span8
+              %p 
+                Written on 
+                %b 28th August, 2013
+              %p
+                by 
+                %b Salma Hayek
+      .content
+        %p Font Awesome works just as well without Bootstrap.
+        %p
+          Copy the font-awesome directory into your project.
+          Follow the above directions and skip the Bootstrap parts.
+          Open your project's font-awesome.less or font-awesome.min.css and edit the font location to point it to your font directory (see above examples).
+          Check out the examples to start using Font Awesome!
+        %p
+          =link_to "continue reading..", '#', :class => 'btn btn-info'
+
+    .blog-post
+      .header
+        %h3 
+          =link_to "New Flat UI design", '#'
+        .post-meta
+          .row-fluid
+            .span2
+              =image_tag "person.jpg", :class => "profile-image"
+            .span8
+              %p 
+                Written on 
+                %b 22th August, 2013
+              %p
+                by 
+                %b Sally Morgan
+      .content
+        %p Font Awesome works just as well without Bootstrap.
+        %p
+          Copy the font-awesome directory into your project.
+          Follow the above directions and skip the Bootstrap parts.
+          Open your project's font-awesome.less or font-awesome.min.css and edit the font location to point it to your font directory (see above examples).
+          Check out the examples to start using Font Awesome!
+        %p
+          =link_to "continue reading..", '#', :class => 'btn btn-info'
+
+
+  .span4.blog-sidebar
+    .section#subscribe
+      .header
+        %h3
+          %i.icon-envelope
+          Get Email Updates
+      .content
+        .email-form
+          %form.form-inline
+            %input.input-medium{:placeholder => "Your Email Address", :type => "text"}/
+            %button.btn.btn-success{:type => "submit"} Subscribe
+        %p Subscribe to the blog and get posts delivered to your inbox. We won't spam you and you won't get more than one email per week.
+    .section
+
+
+
