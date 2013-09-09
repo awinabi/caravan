@@ -1,25 +1,31 @@
 .jumbotron
-  %h1 Caravan
-  %p.lead Starter template for creating bootstrap based templates with middleman.
-  %a.btn.btn-large.btn-success{:href => "#"} Get Started
+  %h1
+    %span.logo
+      %span.ca Ca
+      %span.ra ravan
+  %p.lead Bootstrap template starter with Middleman
+  =link_to "Fork It On Github", 'https://github.com/awinabi/caravan', :class => 'btn btn-large btn-default'
+  /%a.btn.btn-large.btn-success{:href => "#"} Fork It on GitHub
 
 .hseparator
 
 .row-fluid
-  .span4
-    %h2 Heading
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    %p
-      %a.btn{:href => "#"} View details &raquo;
-  .span4
-    %h2 Heading
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    %p
-      %a.btn{:href => "#"} View details &raquo;
-  .span4
-    %h2 Heading
-    %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
-    %p
-      %a.btn{:href => "#"} View details &raquo;
+  .span4.pfeature
+    %h3 
+      %i.icon-bolt
+      Batteries Included
+    %p Bootstrap, Jquery, Font-Awesome frameworks included. Start customizing them for your own templates.
 
-.hseparator
+  .span4.pfeature
+    %h3 
+      %i.icon-tasks
+      Multiple Layouts
+    %p Get multiple layouts, embed partial html "components" and much more.
+
+  .span4.pfeature
+    %h3
+      %i.icon-cogs
+      Use Middleman
+    %p= "Middleman is a blessing for Ruby / HAML / SASS developers. Code less, generate more. For intricacies refer #{link_to 'Middleman Docs', 'http://middlemanapp.com/'}."
+
+

@@ -1,7 +1,8 @@
+
 body {
   padding-top: 20px;
   padding-bottom: 60px;
-  background: url('../images/background.png');
+  background: url('../images/fabric_bg.png');
 }
 
 /* Custom container */
@@ -10,16 +11,99 @@ body {
   max-width: 1000px;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  margin: 80px 0;
-  text-align: center;
+#wrapper{
+  background-color: white;
+  border-right: 4px solid #5D4157;
+  border-bottom: 1px solid #5D4157;
+
+  .navbar .brand {
+    display: block;
+    float: left;
+    padding: 10px 20px 10px;
+    margin-left: -20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #EFEFEF;
+    text-shadow: none;;
+  }
+
+  .navbar .nav > li > a {
+    color: #EFEFEF;
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  .navbar .nav > li > a:hover {
+    background-color: #ac8fa6;
+  }
+
+  .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    color: #343434;
+    text-decoration: none;
+    background-color: #ac8fa6;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
+
+  .navbar-inner{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #5D4157;
+    background-image: none;
+    border-width: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 }
 
-.jumbotron h1 {
-  font-size: 100px;
-  line-height: 1;
+.navbar-inverse .navbar-inner .brand{
+  color: #EFEFEF;
+  font-weight:bold;
 }
+
+
+
+.jumbotron{
+  margin: 80px 0;
+  text-align: center;
+
+  h1{
+    font-size: 100px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
+
+  .logo{
+    background-color: #DEDEDE;
+    padding: 2px 15px 2px 0px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .ca{
+    background-color: #0c67cd;
+    color: white;
+    padding: 2px 15px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .ra{
+    margin-left: -20px;
+  }
+
+}
+
 
 .jumbotron .lead {
   font-size: 24px;
@@ -29,6 +113,10 @@ body {
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
+  font-weight: bold;
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
 }
 
 /* Supporting marketing content */
@@ -43,8 +131,25 @@ body {
   .hseparator{
     height:1px;
     width: 100%;
-    background-color: #DDD;
-    border-top: 1px solid #CCC;
-    margin: 60px 0;
+    background-color: #FEFEFE;
+    border-top: 1px solid #EEE;
+  }
+}
+
+.pfeature{
+  padding: 10px 20px;
+}
+.footer{
+  text-align: right;
+  background-color: #343434;
+  padding: 10px;
+  color: white;
+  a{
+    color: white;
+    border-bottom: 1px dotted;
+  }
+  a:hover{
+    text-decoration: none;
+    border-bottom: 1px solid;
   }
 }

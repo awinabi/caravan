@@ -8,14 +8,14 @@
     %meta{:content => "", :name => "author"}
     %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
     = stylesheet_link_tag "vendors/bootstrap/bootstrap.css", :media => "all"
-    = stylesheet_link_tag "vendors/bootstrap/bootstrap-responsive.css", :media => "all"
+    = stylesheet_link_tag "vendors/font-awesome/css/font-awesome.min.css", :media => "all"
     = stylesheet_link_tag "application", :media => "all"
     /
     / HTML5 shim, for IE6-8 support of HTML5 elements
     /[if lt IE 9]
       <script src="javascripts/html5shiv.js"></script>
   %body
-    .container
+    .container#wrapper
       = partial "layouts/header"
       = yield
       = partial "layouts/footer"
