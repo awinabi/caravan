@@ -111,6 +111,11 @@ body {
 
 }
 
+.btn{
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
 
 .jumbotron .lead {
   font-size: 24px;
@@ -121,9 +126,6 @@ body {
   font-size: 21px;
   padding: 14px 24px;
   font-weight: bold;
-  border-radius: 1px;
-  -moz-border-radius: 1px;
-  -webkit-border-radius: 1px;
 }
 
 /* Supporting marketing content */
@@ -226,6 +228,7 @@ body {
   border-left: 4px solid #CCCCCC;
   background-color: #EFEFEF;
   padding: 10px 5px 0px 5px;
+  color: #565656;
 }
 .general-content{
   padding: 20px;
@@ -233,4 +236,21 @@ body {
 
 #dummy-content{
   height: 600px;
+}
+
+.maplocation{
+  background:transparent url('../images/locationmap.jpg') no-repeat 50% 0px;
+}
+#map{
+  height: 600px;
+  border-top: 1px solid #CCC;
+}
+
+#dummy-section{
+  height: 250px;
+  border: 4px solid #CCCCCC;
+  background-color: #EFEFEF;
+  p{
+    padding: 100px 70px;
+  }
 }
