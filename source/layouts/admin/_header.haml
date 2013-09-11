@@ -1,0 +1,27 @@
+.navbar.navbar-top
+  .navbar-inner
+    .container
+      %a{:href => "index.html", :class => "brand"} Caravan
+      .nav-collapse.collapse.pull-right
+        %ul.nav.pull-right#topheader
+          %li#fat-menu.dropdown
+            %a#drop3.inverse.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+              %span.header-profile-image
+                =image_tag "person.jpg"
+              &nbsp;
+              ="Sally Morgan"
+              &nbsp;&nbsp;
+              %i.icon-ellipsis-vertical
+
+            %ul.dropdown-menu{"aria-labelledby" => "drop3", :role => "menu"}
+              %li{:role => "presentation"}
+                = link_to '#' do 
+                  %i.icon-cog
+                  My Account
+
+              %li.divider{:role => "presentation"}
+              %li{:role => "presentation"}
+                = link_to '#' do
+                  %i.icon-signout
+                    Log Out
+

@@ -1,10 +1,22 @@
-.pageheader
-  %h2 Admin Template
-  %p.subhead Use this!
+---
+layout: admin/layout
+---
 
-.hseparator
 
 .row-fluid
-  .span12
-    .general-content#dummy-content
-      %p Work in progress.
+  .span2.sidebar#left-sidebar
+    %ul.nav.nav-pills.nav-stacked
+      %li.active
+        =link_to '#' do
+          %i.icon-dashboard &nbsp;
+          Dashboard
+      %li
+        =link_to '#' do
+          %i.icon-list &nbsp;
+          Posts
+      %li
+        =link_to '#' do
+          %i.icon-plus &nbsp;
+          New Post
+  .span9#dummy-content
+    %p Work in progress.
