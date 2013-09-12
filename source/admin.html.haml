@@ -4,19 +4,24 @@ layout: admin/layout
 
 
 .row-fluid
-  .span2.sidebar#left-sidebar
-    %ul.nav.nav-pills.nav-stacked
-      %li.active
-        =link_to '#' do
-          %i.icon-dashboard &nbsp;
-          Dashboard
-      %li
-        =link_to '#' do
-          %i.icon-list &nbsp;
-          Posts
-      %li
-        =link_to '#' do
-          %i.icon-plus &nbsp;
-          New Post
-  .span9#dummy-content
-    %p Work in progress.
+  = partial "sidebar"
+  .span10
+    #dashboard-content
+      .titlebar
+        .row-fluid
+          .span6
+            %h3.title Post Analytics
+          .span6
+            .daterange-selection.pull-right
+              =link_to '#' do
+                24 April, 2013 - 24 May, 2013
+                %i.icon-tasks
+      .page-views
+      .metric-links
+        .row-fluid
+          .span6
+          .span6
+      .secondary-metrics
+        .row-fluid
+          .span6
+          .span6

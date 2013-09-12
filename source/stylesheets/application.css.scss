@@ -311,3 +311,19 @@ body {
     color: white;
   }
 }
+
+#dashboard-content{
+  padding: 0px 30px 30px 0px;
+}
+
+.titlebar{
+  border-bottom: 1px solid #EEE;
+  h3.title{
+    font-weight: normal;
+    display: inline;
+  }
+  .daterange-selection{
+    padding-top: 15px;
+    color: #898989;
+  }
+}
