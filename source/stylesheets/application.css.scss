@@ -325,5 +325,11 @@ body {
   .daterange-selection{
     padding-top: 15px;
     color: #898989;
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: none;
+    }
   }
 }
