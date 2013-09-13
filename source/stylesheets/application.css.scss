@@ -242,8 +242,8 @@ body {
 }
 
 .profile-image{
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 500px;
 }
 
@@ -287,6 +287,14 @@ body {
   }
 }
 
+.profile-image{
+  img{
+    height: 40px;
+    width: 40px;
+    border-radius: 500px;
+  }
+}
+
 
 #left-sidebar{
   height: 600px;
@@ -311,7 +319,7 @@ body {
   }
 }
 
-#dashboard-content{
+#posts-content, #newpost-content, #dashboard-content{
   padding: 4px 30px;
 }
 
@@ -384,4 +392,36 @@ body {
 
 .sparkline-label{
   padding-top: 15px;
+}
+
+.admin-posts{
+  padding: 10px 5px;
+  height: 600px;
+}
+
+.admin-post{
+  border: 1px solid #EEE;
+  margin: 10px 0px;
+}
+
+.post-image, .post-title, .post-views{
+  padding: 5px;
+}
+
+.post-views{
+  background-color: #EFEFEF;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+.newpost-form{
+  padding: 20px 0px;
+  input{
+    height: 50px;
+    line-height: 32px;
+    font-size: 25px;
+  }
+  textarea{
+    height: 400px;
+  }
 }

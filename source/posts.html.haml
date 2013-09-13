@@ -3,9 +3,37 @@ layout: admin/layout
 ---
 
 
-.row-fluid
+.row-fluid.admin-wrapper
   = partial "sidebar"
-  .span10
+  .span10.admin-content
     #posts-content
+      .titlebar
+        .row-fluid
+          .span6
+            %h3.title All Posts
+          .span6
+
       .admin-posts
         .admin-post
+          .row-fluid
+            .span2.post-image
+              %span.profile-image
+                =image_tag "person.jpg"
+            .span8.post-title
+              %h5
+                = link_to 'Bootstrap and Font-Awesome frameworks reviewed', '#'
+            .span2.post-views
+              %h5
+                8990 Views
+        .admin-post
+          .row-fluid
+            .span2.post-image
+              %span.profile-image
+                =image_tag "person.jpg"
+            .span8.post-title
+              %h5
+                = link_to 'New Flat UI Design', '#'
+            .span2.post-views
+              %h5
+                9980 Views
+

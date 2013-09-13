@@ -3,9 +3,21 @@ layout: admin/layout
 ---
 
 
-.row-fluid
+.row-fluid.admin-wrapper
   = partial "sidebar"
-  .span10
+  .span10.admin-content
     #newpost-content
-      .titlebox
-      .postbody
+      .titlebar
+        .row-fluid
+          .span6
+            %h3.title New Post
+          .span6
+            .current-time.pull-right
+      .newpost-content
+        .row-fluid
+          .span12.newpost-form
+            %form
+              %input.input-block-level{:type=>"text", :placeholder=>"Post Title"}
+              %textarea.input-block-level{:placeholder=>"start typing your post ..."}
+              .actionbuttons.pull-right
+                %button.btn.btn-default.btn-large Publish
