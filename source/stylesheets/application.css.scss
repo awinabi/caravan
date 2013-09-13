@@ -293,7 +293,6 @@ body {
 }
 
 .sidebar{
-  background-color: #463542;
   padding: 20px 10px;
   .nav > li > a:hover, .nav > li > a:focus, .nav > li.active > a {
     text-decoration: none;
@@ -313,7 +312,7 @@ body {
 }
 
 #dashboard-content{
-  padding: 0px 30px 30px 0px;
+  padding: 4px 30px;
 }
 
 .titlebar{
@@ -338,4 +337,51 @@ body {
   width: 100%;
   height: 300px;
   margin-top: 20px;
+}
+.primary-metrics{
+  margin-top: 30px;
+  padding: 20px 0px;
+}
+
+.sparkline-metrics{
+  margin-top: 30px;
+}
+
+.graph-section{
+  border: 1px solid #BABABA;
+  border-width: 1px;
+  .header{
+    background-color: #EFEFEF;
+    text-align: left;
+    padding: 4px 10px;
+    h4{
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+
+#browserversions-graph{
+  height: 300px;
+}
+
+.admin-wrapper{
+  background-color: #463542;
+}
+
+.admin-content{
+  background-color: white;
+}
+
+.h300{
+  height: 300px;
+}
+
+.sparkline-graph{
+  margin: 20px 0px;
+  padding: 5px;
+}
+
+.sparkline-label{
+  padding-top: 15px;
 }

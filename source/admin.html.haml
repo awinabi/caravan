@@ -3,9 +3,9 @@ layout: admin/layout
 ---
 
 
-.row-fluid
+.row-fluid.admin-wrapper
   = partial "sidebar"
-  .span10
+  .span10.admin-content
     #dashboard-content
       .titlebar
         .row-fluid
@@ -17,14 +17,76 @@ layout: admin/layout
                 23 April, 2013 - 19 May, 2013
                 %i.icon-caret-down
       .page-views#pageviews-graph
-      .metric-links
+
+      .sparkline-metrics
+        .row-fluid
+          .span12
+            .graph-section
+              .header
+                %h4 Blog Usage
+              .content
+                .row-fluid
+                  .span6
+                    .row-fluid.sparkline-graph
+                      .span6
+                        #sparkline1
+                      .span6
+                        .sparkline-label
+                          =link_to 'Visits', '#'
+                    .row-fluid.sparkline-graph
+                      .span6
+                        #sparkline2
+                      .span6
+                        .sparkline-label
+                          =link_to 'Bounce Rate', '#'
+                  .span6
+                    .row-fluid.sparkline-graph
+                      .span6
+                        #sparkline3
+                      .span6
+                        .sparkline-label
+                          = link_to 'Avg. Time on Blog', '#'
+                    .row-fluid.sparkline-graph
+                      .span6
+                        #sparkline4
+                      .span6
+                        .sparkline-label
+                          = link_to '% New Visits', '#'
+
+
+      .primary-metrics
         .row-fluid
           .span6
+            .graph-section
+              .header
+                %h4 Browser Versions
+              .content
+                #browserversions-graph
+
           .span6
-      .secondary-metrics
-        .row-fluid
-          .span6
-          .span6
+            .graph-section
+              .header
+                %h4 Page Views (Content)
+              .content
+                %table.table
+                  %thead
+                    %tr
+                      %th #
+                      %th Page
+                      %th Views
+                  %tbody
+                    %tr
+                      %td 1
+                      %td Bootstrap and Font-Awesome
+                      %td 9500
+                    %tr
+                      %td 2
+                      %td New Flat UI Design
+                      %td 8980
+
+
+
+
 
 - content_for :scripts do
   :javascript
@@ -58,6 +120,7 @@ layout: admin/layout
                 [new Date(2013, 04, 18).getTime(), 980],
                 [new Date(2013, 04, 19).getTime(), 821],
                ];
+
       var d3 = [[new Date(2013, 03, 23).getTime(), 1340],
                 [new Date(2013, 03, 24).getTime(), 1020], 
                 [new Date(2013, 03, 25).getTime(), 1200],
@@ -86,6 +149,7 @@ layout: admin/layout
                 [new Date(2013, 04, 18).getTime(), 810],
                 [new Date(2013, 04, 19).getTime(), 980],
                ];
+
       $.plot("#pageviews-graph", [{
         data: d2,
         lines: { show: true, fill: true },
@@ -106,4 +170,42 @@ layout: admin/layout
       }
       );
 
+      d4 = [{label: "Google Chrome", data: 40}, 
+            {label: "Firefox", data: 30}, 
+            {label: "Opera", data: 12}, 
+            {label: "Firefox 1.5", data: 8}, 
+            {label: "Android Browser", data: 7}, 
+            {label: "Other", data: 3}];
+
+      $.plot("#browserversions-graph", d4, {
+        series: {
+            pie: { 
+                innerRadius: 0.5,
+                show: true
+            }
+        },
+        legend:{
+          show: false
+        }
+      });
+      $("#sparkline1").sparkline([5,6,7,9,9,5,3,2,2,4,6,7,9,4,6,7,12,8,1,4,7,9,4,9.10,8], {
+        type: 'line',
+        width: '140',
+        height: '40'
+      });
+      $("#sparkline2").sparkline([5,6,7,9,4,6,7,12,8,1,9,4,6,7,12,8,1,4,7,9,4,8,6,4], {
+        type: 'line',
+        width: '140',
+        height: '40'
+      });
+      $("#sparkline3").sparkline([5,6,7,9,4,6,7,12,8,4,7,9,4,6,7,12,8,2,4,10,7,12,6,7,12,8,5,6,7], {
+        type: 'bar',
+        width: '140',
+        height: '40'
+      });
+      $("#sparkline4").sparkline([9,4,6,7,12,8,1,4,7,9,4,6,7,5,6,7,12,8,1,4,10,7,12], {
+        type: 'line',
+        width: '140',
+        height: '40'
+      });
     });
