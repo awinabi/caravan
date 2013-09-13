@@ -227,8 +227,8 @@ body {
 
 /* line 244, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
 .profile-image {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 500px; }
 
 /* line 250, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
@@ -272,25 +272,138 @@ body {
   border-radius: 500px; }
 
 /* line 291, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.profile-image img {
+  height: 40px;
+  width: 40px;
+  border-radius: 500px; }
+
+/* line 299, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
 #left-sidebar {
   height: 600px; }
 
-/* line 295, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+/* line 303, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
 .sidebar {
-  background-color: #463542;
   padding: 20px 10px; }
-  /* line 298, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  /* line 305, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
   .sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus, .sidebar .nav > li.active > a {
     text-decoration: none;
     background-color: #917b8c; }
-  /* line 302, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  /* line 309, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
   .sidebar .nav-pills > li > a {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px; }
-  /* line 307, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  /* line 314, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
   .sidebar .nav-stacked > li {
     margin-bottom: 15px; }
-  /* line 310, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  /* line 317, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
   .sidebar ul li a {
     color: white; }
+
+/* line 322, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+#posts-content, #newpost-content, #dashboard-content {
+  padding: 4px 30px; }
+
+/* line 326, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.titlebar {
+  border-bottom: 1px solid #EEE; }
+  /* line 328, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  .titlebar h3.title {
+    font-weight: normal;
+    display: inline; }
+  /* line 332, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  .titlebar .daterange-selection {
+    padding-top: 15px;
+    color: #898989; }
+    /* line 335, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+    .titlebar .daterange-selection a {
+      text-decoration: none; }
+    /* line 338, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+    .titlebar .daterange-selection a:hover {
+      text-decoration: none; }
+
+/* line 344, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.page-views {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px; }
+
+/* line 349, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.primary-metrics {
+  margin-top: 30px;
+  padding: 20px 0px; }
+
+/* line 354, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.sparkline-metrics {
+  margin-top: 30px; }
+
+/* line 358, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.graph-section {
+  border: 1px solid #BABABA;
+  border-width: 1px; }
+  /* line 361, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  .graph-section .header {
+    background-color: #EFEFEF;
+    text-align: left;
+    padding: 4px 10px; }
+    /* line 365, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+    .graph-section .header h4 {
+      font-size: 14px;
+      font-weight: bold; }
+
+/* line 372, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+#browserversions-graph {
+  height: 300px; }
+
+/* line 376, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.admin-wrapper {
+  background-color: #463542; }
+
+/* line 380, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.admin-content {
+  background-color: white; }
+
+/* line 384, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.h300 {
+  height: 300px; }
+
+/* line 388, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.sparkline-graph {
+  margin: 20px 0px;
+  padding: 5px; }
+
+/* line 393, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.sparkline-label {
+  padding-top: 15px; }
+
+/* line 397, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.admin-posts {
+  padding: 10px 5px;
+  height: 600px; }
+
+/* line 402, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.admin-post {
+  border: 1px solid #EEE;
+  margin: 10px 0px; }
+
+/* line 407, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.post-image, .post-title, .post-views {
+  padding: 5px; }
+
+/* line 411, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.post-views {
+  background-color: #EFEFEF;
+  padding: 5px 10px;
+  text-align: right; }
+
+/* line 417, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+.newpost-form {
+  padding: 20px 0px; }
+  /* line 419, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  .newpost-form input {
+    height: 50px;
+    line-height: 32px;
+    font-size: 25px; }
+  /* line 424, /mnt/code/weavelabs/caravan/source/stylesheets/application.css.scss */
+  .newpost-form textarea {
+    height: 400px; }
