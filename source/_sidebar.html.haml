@@ -1,14 +1,14 @@
 .span2.sidebar#left-sidebar
   %ul.nav.nav-pills.nav-stacked
     %li
-      =link_to 'admin.html' do
+      %a{:href => "admin.html"}
         %i.icon-dashboard &nbsp;
         Dashboard
     %li
-      =link_to 'posts.html' do
+      %a{:href => "posts.html"}
         %i.icon-list &nbsp;
         Posts
     %li
-      =link_to 'new_post.html' do
+      %a{:href => "new_post.html"}
         %i.icon-plus &nbsp;
         New Post
