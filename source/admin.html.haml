@@ -14,9 +14,9 @@ layout: admin/layout
           .span6
             .daterange-selection.pull-right
               =link_to '#' do
-                24 April, 2013 - 24 May, 2013
-                %i.icon-arrow-down
-      .page-views
+                23 April, 2013 - 19 May, 2013
+                %i.icon-caret-down
+      .page-views#pageviews-graph
       .metric-links
         .row-fluid
           .span6
@@ -25,3 +25,85 @@ layout: admin/layout
         .row-fluid
           .span6
           .span6
+
+- content_for :scripts do
+  :javascript
+    $(function() {
+
+      var d2 = [[new Date(2013, 03, 23).getTime(), 300], 
+                [new Date(2013, 03, 24).getTime(), 800], 
+                [new Date(2013, 03, 25).getTime(), 1200],
+                [new Date(2013, 03, 26).getTime(), 1340],
+                [new Date(2013, 03, 27).getTime(), 980],
+                [new Date(2013, 03, 28).getTime(), 1010],
+                [new Date(2013, 03, 29).getTime(), 1210],
+                [new Date(2013, 03, 30).getTime(), 850],
+                [new Date(2013, 04, 01).getTime(), 890],
+                [new Date(2013, 04, 02).getTime(), 990],
+                [new Date(2013, 04, 03).getTime(), 1110],
+                [new Date(2013, 04, 04).getTime(), 1210],
+                [new Date(2013, 04, 05).getTime(), 850],
+                [new Date(2013, 04, 06).getTime(), 800],
+                [new Date(2013, 04, 07).getTime(), 705],
+                [new Date(2013, 04, 08).getTime(), 750],
+                [new Date(2013, 04, 09).getTime(), 780],
+                [new Date(2013, 04, 10).getTime(), 880],
+                [new Date(2013, 04, 11).getTime(), 810],
+                [new Date(2013, 04, 12).getTime(), 920],
+                [new Date(2013, 04, 13).getTime(), 934],
+                [new Date(2013, 04, 14).getTime(), 1024],
+                [new Date(2013, 04, 15).getTime(), 1102],
+                [new Date(2013, 04, 16).getTime(), 905],
+                [new Date(2013, 04, 17).getTime(), 890],
+                [new Date(2013, 04, 18).getTime(), 980],
+                [new Date(2013, 04, 19).getTime(), 821],
+               ];
+      var d3 = [[new Date(2013, 03, 23).getTime(), 1340],
+                [new Date(2013, 03, 24).getTime(), 1020], 
+                [new Date(2013, 03, 25).getTime(), 1200],
+                [new Date(2013, 03, 26).getTime(), 800], 
+                [new Date(2013, 03, 27).getTime(), 980],
+                [new Date(2013, 03, 28).getTime(), 990],
+                [new Date(2013, 03, 29).getTime(), 1110],
+                [new Date(2013, 03, 30).getTime(), 1210],
+                [new Date(2013, 04, 01).getTime(), 850],
+                [new Date(2013, 04, 02).getTime(), 800],
+                [new Date(2013, 04, 03).getTime(), 705],
+                [new Date(2013, 04, 04).getTime(), 750],
+                [new Date(2013, 04, 05).getTime(), 780],
+                [new Date(2013, 04, 06).getTime(), 905],
+                [new Date(2013, 04, 07).getTime(), 1010],
+                [new Date(2013, 04, 08).getTime(), 880],
+                [new Date(2013, 04, 09).getTime(), 810],
+                [new Date(2013, 04, 10).getTime(), 920],
+                [new Date(2013, 04, 11).getTime(), 934],
+                [new Date(2013, 04, 12).getTime(), 1024],
+                [new Date(2013, 04, 13).getTime(), 1102],
+                [new Date(2013, 04, 14).getTime(), 1210],
+                [new Date(2013, 04, 15).getTime(), 850],
+                [new Date(2013, 04, 16).getTime(), 890],
+                [new Date(2013, 04, 17).getTime(), 890],
+                [new Date(2013, 04, 18).getTime(), 810],
+                [new Date(2013, 04, 19).getTime(), 980],
+               ];
+      $.plot("#pageviews-graph", [{
+        data: d2,
+        lines: { show: true, fill: true },
+        points: { show: true }
+      },
+      {
+        data: d3,
+        lines: { show: true, fill: false },
+        points: { show: true }
+      }
+      ],
+      {
+        grid: {
+          hoverable: true,
+          clickable: true
+        },
+        xaxis: { mode: "time" }
+      }
+      );
+
+    });
